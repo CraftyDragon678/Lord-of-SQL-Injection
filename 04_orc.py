@@ -1,11 +1,15 @@
 import requests
 import string
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 pw = ""
 a = string.printable
 a = a[:-38]
 base_url = "https://los.rubiya.kr/chall/orc_60e5b360f95c1f9688e4f3a86c5dd494.php"
-cookies = {'PHPSESSID': 'l7blh4j0ivuvo9703rdnkfea5k'}
+cookies = {'PHPSESSID': os.getenv("PHPSESSID")}
 pw_length = 0
 
 for i in range(10):

@@ -1,8 +1,12 @@
 import requests
 import string
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 base_url = "https://los.rubiya.kr/chall/orge_bad2f25db233a7542be75844e314e9f3.php"
-cookie = {"PHPSESSID": "l7blh4j0ivuvo9703rdnkfea5k"}
+cookie = {"PHPSESSID": os.getenv("PHPSESSID")}
 pw_length = 0
 pw = ""
 
