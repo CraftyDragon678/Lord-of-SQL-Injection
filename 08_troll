@@ -1,0 +1,7 @@
+' or id=ascii(97,) %23
+
+Admin
+
+
+#! VARCHAR로 생성된 칼럼은 대소문자를 구분하지 않는다
+ref: https://tomining.tistory.com/179
